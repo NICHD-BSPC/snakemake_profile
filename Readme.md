@@ -62,7 +62,7 @@ rule norm:
 rule quick:
     output: "tests/quick"
     threads: 10
-    resources: runtime=10, mem_mb=1024, disk_mb=10240
+    resources: runtime="1h", mem_mb=1024, disk_mb=10240
     shell: "touch {output}"
 
 rule force_norm:
@@ -80,17 +80,17 @@ rule gpu:
 rule gpu2:
     output: "tests/gpu2"
     threads: 10
-    resources: runtime=10, mem_mb=1024, disk_mb=10240, gpu=1, gpu_model="[gpuk80|gpup100]"
+    resources: runtime=10, mem_mb=1024, disk="10g", gpu=1, gpu_model="[gpuk80|gpup100]"
     shell: "set -x ; touch {output}"
 
 rule tasks:
     output: "tests/tasks"
-    resources: tasks=2
+    resources: tasks=2, mem="1g"
     shell: "touch {output}"
 
 rule ntasks:
     output: "tests/ntasks"
-    resources: ntasks=2
+    resources: ntasks=2, mem_mb=1024
     shell: "touch {output}"
 
 
