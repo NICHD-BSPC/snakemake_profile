@@ -6,6 +6,10 @@ Snakemake profile for biowulf
 >
 > ## This branch uses the generic cluster executor in snakemake >=8
 > 
+> You may need to install
+> [snakemake-executor-plugin-cluster-generic](https://github.com/snakemake/snakemake-executor-plugin-cluster-generic)
+> via pip or conda into the same environment as Snakemake.
+> 
 > The main branch is for snakemake<8. At some point the snakemake8
 > branch will become the default.
 
