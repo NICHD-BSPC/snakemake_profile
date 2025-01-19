@@ -96,7 +96,7 @@ rule ntasks:
 
 __EOF__
 
-$ module load snakemake
+$ module load snakemake/8
 $ git clone https://github.com/NIH-HPC/snakemake_profile.git
 $ snakemake --profile snakemake_profile
 ```
